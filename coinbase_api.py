@@ -103,29 +103,4 @@ class make_coinbase():
         return
 
 coinbase = make_coinbase()
-coinbase.products_candles(product_id='ETH-BTC', granularity=60) #granularity not working
-
-# =============================================================================
-# #############################################
-# # from coinbase_api import make_coinbase
-# import pandas as pd
-# import datetime as dt
-# import matplotlib.pyplot as plt
-# 
-# cbe = make_coinbase()
-# 
-# products = [p['id'] for p in cbe.products()]
-# 
-# df = pd.DataFrame(cbe.products_candles(product_id='ETH-BTC'), granularity = 60, columns = ['time', 'low', 'high', 'open', 'close', 'volume'])
-# df['time'] = df.time.transform(dt.datetime.fromtimestamp)
-# df.set_index('time', inplace=True)
-# 
-# ax, fig = plt.subplots(1, df.shape[1])
-# 
-# for n in df.columns:
-#     df.plot(y = n)
-# plt.show()
-# 
-# 
-# 
-# =============================================================================
+coinbase.products_candles(product_id='ETH-BTC', granularity=60)
